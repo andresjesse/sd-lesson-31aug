@@ -9,8 +9,8 @@ export default function Sd({ content }: SdProps) {
     <div>
       <h1>Sistemas Distribuídos</h1>
 
-      {content.map((fruit) => (
-        <div>{fruit}</div>
+      {content.map((fruit, index) => (
+        <div key={index}>{fruit}</div>
       ))}
     </div>
   );

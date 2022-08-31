@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -15,9 +16,13 @@ const Home: NextPage = () => {
 
       <div>Hello Hello!</div>
 
-      {data.map((fruit) => (
-        <span>{fruit}</span>
+      {data.map((fruit, index) => (
+        <div key={index}>{fruit}</div>
       ))}
+
+      <Link href="/courses/pdm">
+        <a>PDM</a>
+      </Link>
     </div>
   );
 };
